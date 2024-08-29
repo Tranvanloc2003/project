@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:get/get.dart';
+import 'package:project_appbanhang/Widgets/quantity_widgets.dart';
+import 'package:project_appbanhang/Widgets/text_subtitle.dart';
 import 'package:project_appbanhang/Widgets/text_title.dart';
+import 'package:project_appbanhang/const/app_color.dart';
 
 class CartWidgets extends StatelessWidget {
   CartWidgets({super.key});
@@ -27,10 +32,63 @@ class CartWidgets extends StatelessWidget {
                 const SizedBox(
                   width: 10,
                 ),
-                ListTile(
-                    title: TextTitle(
-                  label: "11111111111111111111111111111111111",
-                ))
+                IntrinsicWidth(
+                  child: Column(
+                    children: [
+                      Row(
+                        children: [
+                          SizedBox(
+                            width: size.width * 0.6,
+                            child: Text(
+                              "Title" * 15,
+                              maxLines: 2,
+                            ),
+                          ),
+                          IconButton(
+                            onPressed: () {},
+                            icon: FaIcon(FontAwesomeIcons.circleXmark),
+                          ),
+                          IconButton(
+                            onPressed: () {},
+                            icon: FaIcon(FontAwesomeIcons.heart),
+                          ),
+                        ],
+                      ),
+                      SizedBox(
+                        height: 10,
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          TextSubtitle(
+                            label: "Price: 100.000 VND",
+                          ),
+                          Spacer(),
+                          OutlinedButton.icon(
+                            onPressed: () async {
+                              await showModalBottomSheet(
+                                  backgroundColor: AppColors.lightScaffoldColor,
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.only(
+                                      topLeft: Radius.circular(20),
+                                      topRight: Radius.circular(20),
+                                    ),
+                                  ),
+                                  builder: (context) {
+                                    return QuantityWidgets();
+                                  },
+                                  context: context);
+                            },
+                            label: Text("Qty: 6"),
+                            style: OutlinedButton.styleFrom(
+                              side: BorderSide(color: Colors.black),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
               ],
             ),
           ),

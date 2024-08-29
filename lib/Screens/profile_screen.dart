@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
+import 'package:project_appbanhang/Widgets/appbar_widgets.dart';
 import 'package:project_appbanhang/Widgets/text_subtitle.dart';
 import 'package:project_appbanhang/Widgets/text_title.dart';
 import 'package:project_appbanhang/const/app_constans.dart';
@@ -16,13 +17,7 @@ class ProfileScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        appBar: AppBar(
-          title: const Text("Hồ sơ"),
-          leading: const Padding(
-            padding: EdgeInsets.all(8.0),
-            child: Logo(),
-          ),
-        ),
+        appBar: AppBarWidget(text: "Hồ sơ"),
         body: Padding(
           padding: const EdgeInsets.all(8.0),
           child: SingleChildScrollView(

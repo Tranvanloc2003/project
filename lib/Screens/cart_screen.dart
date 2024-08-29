@@ -4,6 +4,8 @@ import 'package:project_appbanhang/Widgets/logo_widgets.dart';
 import 'package:project_appbanhang/Widgets/text_title.dart';
 import 'package:project_appbanhang/const/app_constans.dart';
 
+import '../Widgets/appbar_widgets.dart';
+import '../Widgets/bottom_checkout.dart';
 import '../Widgets/empty_bag.dart';
 
 class CartScreen extends StatelessWidget {
@@ -13,10 +15,7 @@ class CartScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        appBar: AppBar(
-          leading: const Logo(),
-          title: const TextTitle(label: "Giỏ hàng có 0 sản phẩm"),
-        ),
+        appBar: const AppBarWidget(text: "Giỏ hàng có 0 sản phẩm"),
         // body: EmptyBag(
         //   imagePath: AppConstans.shoppingBasket,
         //   title: "Giỏ hàng của bạn đang trống",
@@ -24,7 +23,17 @@ class CartScreen extends StatelessWidget {
         //   subTitle: "Hãy thêm sản phẩm vào giỏ hàng và làm tôi hạnh phúc",
         //   function: () {},
         // ),
-        body: CartWidgets(),
+        body: Column(
+          children: [
+            Expanded(
+              child: ListView.builder(
+                itemCount: 5,
+                itemBuilder: (context, index) => CartWidgets(),
+              ),
+            ),
+            BottomCheckout(),
+          ],
+        ),
       ),
     );
   }
