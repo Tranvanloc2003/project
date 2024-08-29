@@ -1,3 +1,5 @@
+import '../Models/category_models.dart';
+
 class AppConstans {
   //folder image
   static const String asset = 'assets/';
@@ -17,12 +19,59 @@ class AppConstans {
   static const String shoppingBasket = '${assetBag}shopping_basket.png';
   static const String shoppingCart = '${assetBag}shopping_cart.png';
   static const String wishlistSvg = '${assetBag}wishlist_svg.png';
-
+  static List<String> bannersImages = [
+    banner1,
+    banner2,
+    banner3,
+    banner4,
+  ];
   // Banner images
   static const String banner1 = '${assetBanners}banner1.png';
   static const String banner2 = '${assetBanners}banner2.png';
   static const String banner3 = '${assetBanners}banner3.png';
   static const String banner4 = '${assetBanners}banner4.png';
+  static List<CategoryModels> categoriesList = [
+    CategoryModels(
+      id: "Phones",
+      image: mobiles,
+      name: "Điện thoại",
+    ),
+    CategoryModels(
+      id: "Laptops",
+      image: pc,
+      name: "Laptops",
+    ),
+    CategoryModels(
+      id: "Electronics",
+      image: electronics,
+      name: "Điện tử",
+    ),
+    CategoryModels(
+      id: "Watches",
+      image: watch,
+      name: "Đồng hồ",
+    ),
+    CategoryModels(
+      id: "Clothes",
+      image: fashion,
+      name: "Quần áo",
+    ),
+    CategoryModels(
+      id: "Shoes",
+      image: shoes,
+      name: "Giày dép",
+    ),
+    CategoryModels(
+      id: "Books",
+      image: bookImg,
+      name: "Sách",
+    ),
+    CategoryModels(
+      id: "Cosmetics",
+      image: cosmetics,
+      name: "Mỹ phẩm",
+    ),
+  ];
 
   // Category images
   static const String bookImg = '${assetCategories}book_img.png';

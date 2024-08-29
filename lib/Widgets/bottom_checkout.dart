@@ -25,7 +25,10 @@ class BottomCheckout extends StatelessWidget {
                     FittedBox(
                       child: Text("6 sản phẩm trên 9 số lượng:"),
                     ),
-                    Text("16.0\$", style: TextStyle(color: Colors.blue)),
+                    Text(
+                      "16.0\$",
+                      style: TextStyle(color: Colors.blue),
+                    ),
                   ],
                 ),
               ),

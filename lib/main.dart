@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
       theme: Styles.themeData(false, context),
       darkTheme: Styles.themeData(true, context),
       // home: HomeScreen(),
-      home: BottomBar(),
+      home: const BottomBar(),
     );
   }
 }
