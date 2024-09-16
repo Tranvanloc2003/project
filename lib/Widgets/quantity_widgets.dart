@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../const/app_color.dart';
+
 class QuantityWidgets extends StatelessWidget {
   const QuantityWidgets({super.key});
 
@@ -15,7 +17,7 @@ class QuantityWidgets extends StatelessWidget {
           width: 50,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(12.0),
-            color: Colors.grey,
+            color: AppColors.battleshipGray,
           ),
         ),
         SizedBox(

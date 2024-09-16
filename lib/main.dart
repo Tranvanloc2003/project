@@ -2,8 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:project_appbanhang/Controllers/theme_controller.dart';
 import 'package:project_appbanhang/Screens/profile_screen.dart';
+import 'package:project_appbanhang/Screens/profile_user_screen.dart';
 import 'package:project_appbanhang/const/theme_data.dart';
 
+import 'Auth/Profile_user/replace_profile.dart';
 import 'Screens/home_screen.dart';
 import 'bottom_bar.dart';
 
@@ -20,8 +22,8 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: Styles.themeData(false, context),
       darkTheme: Styles.themeData(true, context),
-      // home: HomeScreen(),
-      home: const BottomBar(),
+      home: ReplaceProfile(),
+      // home: const BottomBar(),
     );
   }
 }

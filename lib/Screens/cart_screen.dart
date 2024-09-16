@@ -28,7 +28,11 @@ class CartScreen extends StatelessWidget {
             Expanded(
               child: ListView.builder(
                 itemCount: 5,
-                itemBuilder: (context, index) => CartWidgets(),
+                itemBuilder: (context, index) => Padding(
+                  padding:
+                      const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
+                  child: CartWidgets(),
+                ),
               ),
             ),
             BottomCheckout(),

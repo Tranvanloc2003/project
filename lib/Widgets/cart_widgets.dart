@@ -14,25 +14,28 @@ class CartWidgets extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
     return FittedBox(
       child: IntrinsicWidth(
-        child: ClipRRect(
-          borderRadius: BorderRadius.all(
-            Radius.circular(12.0),
+        child: Container(
+          decoration: BoxDecoration(
+            border: Border.all(color: AppColors.battleshipGray),
+            borderRadius: BorderRadius.circular(30),
           ),
-          child: Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Image.asset(
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              ClipRRect(
+                borderRadius: BorderRadius.only(
+                    bottomLeft: Radius.circular(30),
+                    topLeft: Radius.circular(30)),
+                child: Image.asset(
                   "assets/img/monan.jpg",
                   height: size.height * 0.2,
                   width: size.height * 0.2,
                   fit: BoxFit.cover,
                 ),
-                const SizedBox(
-                  width: 10,
-                ),
-                IntrinsicWidth(
+              ),
+              IntrinsicWidth(
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
                   child: Column(
                     children: [
                       Row(
@@ -89,8 +92,8 @@ class CartWidgets extends StatelessWidget {
                     ],
                   ),
                 ),
-              ],
-            ),
+              ),
+            ],
           ),
         ),
       ),

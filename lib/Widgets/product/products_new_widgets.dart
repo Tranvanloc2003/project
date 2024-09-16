@@ -3,6 +3,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 import 'package:project_appbanhang/Widgets/text_subtitle.dart';
 
+import '../../const/app_color.dart';
 import '../text_title.dart';
 
 class ProductsNewWidgets extends StatelessWidget {
@@ -13,22 +14,22 @@ class ProductsNewWidgets extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
     return Container(
       decoration: BoxDecoration(
-        border: Border.all(color: Colors.grey),
-        borderRadius: BorderRadius.circular(10),
+        border: Border.all(color: AppColors.battleshipGray),
+        borderRadius: BorderRadius.circular(30),
       ),
       child: Row(
         children: [
           ClipRRect(
             borderRadius: BorderRadius.only(
-              topLeft: Radius.circular(10),
-              bottomLeft: Radius.circular(10),
+              topLeft: Radius.circular(30),
+              bottomLeft: Radius.circular(30),
             ),
             child: Image.asset("assets/img/monan.jpg",
                 height: 100, width: 100, fit: BoxFit.cover),
           ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: IntrinsicWidth(
+          IntrinsicWidth(
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -58,7 +59,6 @@ class ProductsNewWidgets extends StatelessWidget {
                   SizedBox(
                     width: size.width * 0.7,
                     child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         TextSubtitle(label: "100k"),
                         Spacer(),
@@ -72,7 +72,7 @@ class ProductsNewWidgets extends StatelessWidget {
                 ],
               ),
             ),
-          )
+          ),
         ],
       ),
     );

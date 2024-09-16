@@ -42,6 +42,7 @@ class HomeScreen extends StatelessWidget {
                       builder: DotSwiperPaginationBuilder(
                           activeColor: Colors.red, color: Colors.white),
                     ),
+                    autoplayDelay: 3000,
                   ),
                 ),
               ),

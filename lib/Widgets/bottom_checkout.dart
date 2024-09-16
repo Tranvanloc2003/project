@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get_connect/http/src/utils/utils.dart';
 
+import '../const/app_color.dart';
+
 class BottomCheckout extends StatelessWidget {
   const BottomCheckout({super.key});
 
@@ -9,7 +11,7 @@ class BottomCheckout extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
         border: Border(
-          top: BorderSide(width: 1, color: Colors.grey),
+          top: BorderSide(width: 1, color: AppColors.battleshipGray),
         ),
       ),
       child: SizedBox(
